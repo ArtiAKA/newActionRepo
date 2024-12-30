@@ -1,5 +1,5 @@
 name: Event based workflow execution
-run-name: checking workflow reuse - DEMO
+run-name: checking workflow reuse - Main
 
 on:
   push:
