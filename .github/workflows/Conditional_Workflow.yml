@@ -6,6 +6,13 @@ on:
     branches:
       - main
       - BLearn*
+  pull_request:
+    branches:
+      - main
+  fork:
+    branches:
+      - main
+
 
 jobs:
   main_job:
@@ -17,4 +24,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
+      - run: echo "TRIGGERED the main branch workflow - event based"
+
 
