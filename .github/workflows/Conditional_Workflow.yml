@@ -1,0 +1,20 @@
+name: Conditional_Workflow.yml
+run-name:  Testing if condition where any push happend in main branch
+
+on:
+  push:
+    branches:
+      - main
+      - BLearn*
+
+jobs:
+  main_job:
+    if: startsWith(github.ref, 'refs/heads/main')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "-------JOB EXECUTION ON MAIN BRANCH PUSH-------"
+      - uses: actions/checkout@v4.1.7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
