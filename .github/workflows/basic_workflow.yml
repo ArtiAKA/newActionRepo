@@ -1,7 +1,7 @@
 name: Github actions demo
 run-name: Testing our basic Github actions workflow
 
-on: [push]
+on: [fork]
 
 jobs:
   basic_workflow:
